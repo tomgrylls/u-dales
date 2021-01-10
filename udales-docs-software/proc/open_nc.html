@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="Documentation for uDALES">
+   
+    <meta name="author" content="The uDALES Team" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>open_nc &ndash; uDALES</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">uDALES </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/dalesurban.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/dalesurban.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>open_nc
+      <small>Subroutine</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.8% of total for procedures.">105 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/modstat_nc.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/modstat_nc.f90.html'>modstat_nc.f90</a></li>
+    
+     <li><a href='../module/modstat_nc.html'>modstat_nc</a></li>
+    
+  
+     <li class="active">open_nc</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/open_nc.html#src">open_nc</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>
+public subroutine open_nc(fname, ncid, nrec, n1, n2, n3, ns, nfcts, nlyrs)
+    
+    
+   
+</h2>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/modglobal.html'>modglobal</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: proc~~open_nc~~UsesGraph Pages: 1 -->
+<svg id="procopen_ncUsesGraph" width="160pt" height="32pt"
+ viewBox="0.00 0.00 160.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~open_nc~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~open_nc~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 156,-28 156,4 -4,4"/>
+<!-- proc~open_nc -->
+<g id="proc~~open_nc~~UsesGraph_node1" class="node">
+<title>proc~open_nc</title>
+<polygon fill="none" stroke="#000000" points="152,-24 98,-24 98,0 152,0 152,-24"/>
+<text text-anchor="middle" x="125" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">open_nc</text>
+</g>
+<!-- module~modglobal -->
+<g id="proc~~open_nc~~UsesGraph_node2" class="node">
+<title>module~modglobal</title>
+<g id="a_proc~~open_nc~~UsesGraph_node2"><a xlink:href=".././module/modglobal.html" xlink:title="modglobal">
+<polygon fill="#337ab7" stroke="#337ab7" points="62,-24 0,-24 0,0 62,0 62,-24"/>
+<text text-anchor="middle" x="31" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modglobal</text>
+</a>
+</g>
+</g>
+<!-- proc~open_nc&#45;&gt;module~modglobal -->
+<g id="proc~~open_nc~~UsesGraph_edge1" class="edge">
+<title>proc~open_nc&#45;&gt;module~modglobal</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M97.8113,-12C89.783,-12 80.8108,-12 72.1119,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="72.0988,-8.5001 62.0987,-12 72.0987,-15.5001 72.0988,-8.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
+    
+
+
+    
+
+    <h3>Arguments</h3>
+    
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fname"></span>character(len=40),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fname</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncid"></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ncid</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nrec"></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nrec</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n1"></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>n1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n2"></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>n2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n3"></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>n3</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ns"></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>ns</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nfcts"></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>nfcts</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nlyrs"></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>nlyrs</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+    
+    
+    <br>
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Calls</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: proc~~open_nc~~CallsGraph Pages: 1 -->
+<svg id="procopen_ncCallsGraph" width="225pt" height="494pt"
+ viewBox="0.00 0.00 225.00 494.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~open_nc~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 490)">
+<title>proc~~open_nc~~CallsGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-490 221,-490 221,4 -4,4"/>
+<!-- proc~open_nc -->
+<g id="proc~~open_nc~~CallsGraph_node1" class="node">
+<title>proc~open_nc</title>
+<polygon fill="none" stroke="#000000" points="54,-255 0,-255 0,-231 54,-231 54,-255"/>
+<text text-anchor="middle" x="27" y="-240.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">open_nc</text>
+</g>
+<!-- nf90_put_att -->
+<g id="proc~~open_nc~~CallsGraph_node2" class="node">
+<title>nf90_put_att</title>
+<polygon fill="#777777" stroke="#777777" points="190,-486 117,-486 117,-462 190,-462 190,-486"/>
+<text text-anchor="middle" x="153.5" y="-471.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_put_att</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_put_att -->
+<g id="proc~~open_nc~~CallsGraph_edge1" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_put_att</title>
+<path fill="none" stroke="#ff0000" d="M29.1351,-255.1768C36.4262,-295.4828 61.4732,-423.6651 90,-453 94.8406,-457.9778 100.8845,-461.7759 107.3053,-464.6738"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="106.2949,-468.0338 116.8862,-468.3081 108.7776,-461.4889 106.2949,-468.0338"/>
+</g>
+<!-- nf90_def_dim -->
+<g id="proc~~open_nc~~CallsGraph_node3" class="node">
+<title>nf90_def_dim</title>
+<polygon fill="#777777" stroke="#777777" points="192.5,-444 114.5,-444 114.5,-420 192.5,-420 192.5,-444"/>
+<text text-anchor="middle" x="153.5" y="-429.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_def_dim</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_def_dim -->
+<g id="proc~~open_nc~~CallsGraph_edge2" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_def_dim</title>
+<path fill="none" stroke="#ff0000" d="M28.0238,-255.0768C31.2594,-285.6366 43.9655,-366.7438 90,-411 94.29,-415.1243 99.4072,-418.4388 104.8486,-421.1026"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="103.6458,-424.3929 114.2233,-424.9993 106.3326,-417.9291 103.6458,-424.3929"/>
+</g>
+<!-- nf90_inquire_dimension -->
+<g id="proc~~open_nc~~CallsGraph_node4" class="node">
+<title>nf90_inquire_dimension</title>
+<polygon fill="#777777" stroke="#777777" points="217,-402 90,-402 90,-378 217,-378 217,-402"/>
+<text text-anchor="middle" x="153.5" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_inquire_dimension</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_inquire_dimension -->
+<g id="proc~~open_nc~~CallsGraph_edge3" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_inquire_dimension</title>
+<path fill="none" stroke="#ff0000" d="M29.786,-255.351C36.0782,-280.4389 53.7497,-337.6353 90,-369 91.5147,-370.3106 93.1136,-371.5399 94.7785,-372.6929"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="93.1711,-375.8077 103.5681,-377.8456 96.7113,-369.7688 93.1711,-375.8077"/>
+</g>
+<!-- nf90_inquire -->
+<g id="proc~~open_nc~~CallsGraph_node5" class="node">
+<title>nf90_inquire</title>
+<polygon fill="#777777" stroke="#777777" points="189.5,-360 117.5,-360 117.5,-336 189.5,-336 189.5,-360"/>
+<text text-anchor="middle" x="153.5" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_inquire</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_inquire -->
+<g id="proc~~open_nc~~CallsGraph_edge5" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_inquire</title>
+<path fill="none" stroke="#ff0000" d="M32.9965,-255.1439C42.5845,-273.3471 63.0624,-307.6328 90,-327 95.3208,-330.8255 101.3818,-333.9849 107.598,-336.5859"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="106.8171,-340.0294 117.4101,-340.2293 109.2538,-333.4672 106.8171,-340.0294"/>
+</g>
+<!-- nf90_def_var -->
+<g id="proc~~open_nc~~CallsGraph_node6" class="node">
+<title>nf90_def_var</title>
+<polygon fill="#777777" stroke="#777777" points="191.5,-318 115.5,-318 115.5,-294 191.5,-294 191.5,-318"/>
+<text text-anchor="middle" x="153.5" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_def_var</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_def_var -->
+<g id="proc~~open_nc~~CallsGraph_edge4" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_def_var</title>
+<path fill="none" stroke="#ff0000" d="M42.5987,-255.1292C54.9317,-264.2812 72.8677,-276.6459 90,-285 94.9575,-287.4174 100.2614,-289.6607 105.6126,-291.7112"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="104.6368,-295.0801 115.2311,-295.1901 107.0177,-288.4975 104.6368,-295.0801"/>
+</g>
+<!-- nf90_inq_varid -->
+<g id="proc~~open_nc~~CallsGraph_node7" class="node">
+<title>nf90_inq_varid</title>
+<polygon fill="#777777" stroke="#777777" points="195,-276 112,-276 112,-252 195,-252 195,-276"/>
+<text text-anchor="middle" x="153.5" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_inq_varid</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_inq_varid -->
+<g id="proc~~open_nc~~CallsGraph_edge6" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_inq_varid</title>
+<path fill="none" stroke="#ff0000" d="M54.1374,-247.505C68.0852,-249.8205 85.5564,-252.7208 101.9428,-255.4411"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="101.526,-258.9197 111.9642,-257.1047 102.6724,-252.0142 101.526,-258.9197"/>
+</g>
+<!-- nf90_open -->
+<g id="proc~~open_nc~~CallsGraph_node8" class="node">
+<title>nf90_open</title>
+<polygon fill="#777777" stroke="#777777" points="185.5,-234 121.5,-234 121.5,-210 185.5,-210 185.5,-234"/>
+<text text-anchor="middle" x="153.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_open</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_open -->
+<g id="proc~~open_nc~~CallsGraph_edge7" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_open</title>
+<path fill="none" stroke="#ff0000" d="M54.1374,-238.495C70.8757,-235.7163 92.6882,-232.0952 111.6106,-228.954"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="112.195,-232.4049 121.4868,-227.3145 111.0485,-225.4995 112.195,-232.4049"/>
+</g>
+<!-- nf90_create -->
+<g id="proc~~open_nc~~CallsGraph_node9" class="node">
+<title>nf90_create</title>
+<polygon fill="#777777" stroke="#777777" points="188.5,-192 118.5,-192 118.5,-168 188.5,-168 188.5,-192"/>
+<text text-anchor="middle" x="153.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_create</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_create -->
+<g id="proc~~open_nc~~CallsGraph_edge8" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_create</title>
+<path fill="none" stroke="#ff0000" d="M42.5987,-230.8708C54.9317,-221.7188 72.8677,-209.3541 90,-201 95.8218,-198.1612 102.1214,-195.5624 108.4141,-193.2339"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="109.9437,-196.4069 118.2275,-189.8017 107.6326,-189.7994 109.9437,-196.4069"/>
+</g>
+<!-- nf90_get_var -->
+<g id="proc~~open_nc~~CallsGraph_node10" class="node">
+<title>nf90_get_var</title>
+<polygon fill="#777777" stroke="#777777" points="191.5,-150 115.5,-150 115.5,-126 191.5,-126 191.5,-150"/>
+<text text-anchor="middle" x="153.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_get_var</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_get_var -->
+<g id="proc~~open_nc~~CallsGraph_edge9" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_get_var</title>
+<path fill="none" stroke="#ff0000" d="M32.9965,-230.8561C42.5845,-212.6529 63.0624,-178.3672 90,-159 94.8317,-155.5262 100.2739,-152.6016 105.8883,-150.1455"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="107.3694,-153.325 115.4224,-146.4403 104.8337,-146.8004 107.3694,-153.325"/>
+</g>
+<!-- nf90_inq_dimid -->
+<g id="proc~~open_nc~~CallsGraph_node11" class="node">
+<title>nf90_inq_dimid</title>
+<polygon fill="#777777" stroke="#777777" points="196,-108 111,-108 111,-84 196,-84 196,-108"/>
+<text text-anchor="middle" x="153.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_inq_dimid</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_inq_dimid -->
+<g id="proc~~open_nc~~CallsGraph_edge10" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_inq_dimid</title>
+<path fill="none" stroke="#ff0000" d="M29.786,-230.649C36.0782,-205.5611 53.7497,-148.3647 90,-117 93.452,-114.0132 97.3413,-111.4486 101.4521,-109.2468"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="103.0989,-112.3418 110.7215,-104.9834 100.1739,-105.9823 103.0989,-112.3418"/>
+</g>
+<!-- nf90_enddef -->
+<g id="proc~~open_nc~~CallsGraph_node12" class="node">
+<title>nf90_enddef</title>
+<polygon fill="#777777" stroke="#777777" points="190,-66 117,-66 117,-42 190,-42 190,-66"/>
+<text text-anchor="middle" x="153.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_enddef</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_enddef -->
+<g id="proc~~open_nc~~CallsGraph_edge11" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_enddef</title>
+<path fill="none" stroke="#ff0000" d="M28.0238,-230.9232C31.2594,-200.3634 43.9655,-119.2562 90,-75 94.9492,-70.242 100.9994,-66.5617 107.3781,-63.7149"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="108.7618,-66.9334 116.8687,-60.1122 106.2775,-60.3891 108.7618,-66.9334"/>
+</g>
+<!-- nf90_sync -->
+<g id="proc~~open_nc~~CallsGraph_node13" class="node">
+<title>nf90_sync</title>
+<polygon fill="#777777" stroke="#777777" points="184,-24 123,-24 123,0 184,0 184,-24"/>
+<text text-anchor="middle" x="153.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_sync</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_sync -->
+<g id="proc~~open_nc~~CallsGraph_edge12" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_sync</title>
+<path fill="none" stroke="#ff0000" d="M29.1351,-230.8232C36.4262,-190.5172 61.4732,-62.3349 90,-33 96.2933,-26.5284 104.6204,-22.0507 113.1657,-18.9528"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="114.2672,-22.2761 122.8094,-16.0086 112.2232,-15.5811 114.2672,-22.2761"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="560pt" height="32pt"
+ viewBox="0.00 0.00 559.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 555.5,-28 555.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="364,-24 228,-24 228,0 364,0 364,-24"/>
+<text text-anchor="middle" x="296" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="436,-24 382,-24 382,0 436,0 436,-24"/>
+<text text-anchor="middle" x="409" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="551.5,-24 454.5,-24 454.5,0 551.5,0 551.5,-24"/>
+<text text-anchor="middle" x="503" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a procedure to one which it calls. Dashed 
+    arrows point from an interface to procedures which implement that interface.
+    This could include the module procedures in a generic interface or the
+    implementation in a submodule of an interface in a parent module. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+     
+     
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Called by</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: proc~~open_nc~~CalledByGraph Pages: 1 -->
+<svg id="procopen_ncCalledByGraph" width="292pt" height="116pt"
+ viewBox="0.00 0.00 292.00 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~open_nc~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<title>proc~~open_nc~~CalledByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-112 288,-112 288,4 -4,4"/>
+<!-- proc~open_nc -->
+<g id="proc~~open_nc~~CalledByGraph_node1" class="node">
+<title>proc~open_nc</title>
+<polygon fill="none" stroke="#000000" points="284,-66 230,-66 230,-42 284,-42 284,-66"/>
+<text text-anchor="middle" x="257" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">open_nc</text>
+</g>
+<!-- proc~initstatsdump -->
+<g id="proc~~open_nc~~CalledByGraph_node2" class="node">
+<title>proc~initstatsdump</title>
+<g id="a_proc~~open_nc~~CalledByGraph_node2"><a xlink:href=".././proc/initstatsdump.html" xlink:title="initstatsdump">
+<polygon fill="#d9534f" stroke="#d9534f" points="194,-108 118,-108 118,-84 194,-84 194,-108"/>
+<text text-anchor="middle" x="156" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">initstatsdump</text>
+</a>
+</g>
+</g>
+<!-- proc~initstatsdump&#45;&gt;proc~open_nc -->
+<g id="proc~~open_nc~~CalledByGraph_edge1" class="edge">
+<title>proc~initstatsdump&#45;&gt;proc~open_nc</title>
+<path fill="none" stroke="#ff0000" d="M184.9425,-83.9645C195.9633,-79.3816 208.6703,-74.0975 220.3156,-69.2549"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="221.8979,-72.3875 229.7875,-65.3161 219.2101,-65.9241 221.8979,-72.3875"/>
+</g>
+<!-- proc~initfielddump -->
+<g id="proc~~open_nc~~CalledByGraph_node3" class="node">
+<title>proc~initfielddump</title>
+<g id="a_proc~~open_nc~~CalledByGraph_node3"><a xlink:href=".././proc/initfielddump.html" xlink:title="initfielddump">
+<polygon fill="#d9534f" stroke="#d9534f" points="192.5,-66 119.5,-66 119.5,-42 192.5,-42 192.5,-66"/>
+<text text-anchor="middle" x="156" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">initfielddump</text>
+</a>
+</g>
+</g>
+<!-- proc~initfielddump&#45;&gt;proc~open_nc -->
+<g id="proc~~open_nc~~CalledByGraph_edge2" class="edge">
+<title>proc~initfielddump&#45;&gt;proc~open_nc</title>
+<path fill="none" stroke="#ff0000" d="M192.749,-54C201.5867,-54 211.0326,-54 219.8867,-54"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="219.937,-57.5001 229.937,-54 219.9369,-50.5001 219.937,-57.5001"/>
+</g>
+<!-- proc~initeb -->
+<g id="proc~~open_nc~~CalledByGraph_node4" class="node">
+<title>proc~initeb</title>
+<g id="a_proc~~open_nc~~CalledByGraph_node4"><a xlink:href=".././proc/initeb.html" xlink:title="initEB">
+<polygon fill="#d9534f" stroke="#d9534f" points="183,-24 129,-24 129,0 183,0 183,-24"/>
+<text text-anchor="middle" x="156" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">initEB</text>
+</a>
+</g>
+</g>
+<!-- proc~initeb&#45;&gt;proc~open_nc -->
+<g id="proc~~open_nc~~CalledByGraph_edge3" class="edge">
+<title>proc~initeb&#45;&gt;proc~open_nc</title>
+<path fill="none" stroke="#ff0000" d="M183.0661,-23.2552C194.5006,-28.0102 207.9947,-33.6216 220.3037,-38.7401"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="219.2818,-42.1057 229.8591,-42.7137 221.9696,-35.6423 219.2818,-42.1057"/>
+</g>
+<!-- program~dalesurban -->
+<g id="proc~~open_nc~~CalledByGraph_node5" class="node">
+<title>program~dalesurban</title>
+<g id="a_proc~~open_nc~~CalledByGraph_node5"><a xlink:href=".././program/dalesurban.html" xlink:title="DALESURBAN">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="82,-66 0,-66 0,-42 82,-42 82,-66"/>
+<text text-anchor="middle" x="41" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DALESURBAN</text>
+</a>
+</g>
+</g>
+<!-- program~dalesurban&#45;&gt;proc~initstatsdump -->
+<g id="proc~~open_nc~~CalledByGraph_edge4" class="edge">
+<title>program~dalesurban&#45;&gt;proc~initstatsdump</title>
+<path fill="none" stroke="#ff0000" d="M73.9544,-66.0355C86.2248,-70.5169 100.3312,-75.6688 113.3478,-80.4227"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="112.4469,-83.8197 123.0408,-83.9627 114.8484,-77.2445 112.4469,-83.8197"/>
+</g>
+<!-- program~dalesurban&#45;&gt;proc~initfielddump -->
+<g id="proc~~open_nc~~CalledByGraph_edge5" class="edge">
+<title>program~dalesurban&#45;&gt;proc~initfielddump</title>
+<path fill="none" stroke="#00ff00" d="M82.1928,-54C90.9015,-54 100.1543,-54 109.0574,-54"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="109.2947,-57.5001 119.2946,-54 109.2946,-50.5001 109.2947,-57.5001"/>
+</g>
+<!-- program~dalesurban&#45;&gt;proc~initeb -->
+<g id="proc~~open_nc~~CalledByGraph_edge6" class="edge">
+<title>program~dalesurban&#45;&gt;proc~initeb</title>
+<path fill="none" stroke="#0000ff" d="M73.9544,-41.9645C88.0832,-36.8044 104.6462,-30.7553 119.1769,-25.4484"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="120.6645,-28.6313 128.857,-21.9131 118.2631,-22.0561 120.6645,-28.6313"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="560pt" height="32pt"
+ viewBox="0.00 0.00 559.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 555.5,-28 555.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="364,-24 228,-24 228,0 364,0 364,-24"/>
+<text text-anchor="middle" x="296" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="436,-24 382,-24 382,0 436,0 436,-24"/>
+<text text-anchor="middle" x="409" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="551.5,-24 454.5,-24 454.5,0 551.5,0 551.5,-24"/>
+<text text-anchor="middle" x="503" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a procedure to one which it calls. Dashed 
+    arrows point from an interface to procedures which implement that interface.
+    This could include the module procedures in a generic interface or the
+    implementation in a submodule of an interface in a parent module. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+     
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/open_nc.html#src">open_nc</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span>  <span class="k">subroutine </span><span class="n">open_nc</span> <span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">ncid</span><span class="p">,</span><span class="n">nrec</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n3</span><span class="p">,</span> <span class="n">ns</span><span class="p">,</span> <span class="n">nfcts</span><span class="p">,</span> <span class="n">nlyrs</span><span class="p">)</span>
+    <span class="k">use </span><span class="n">modglobal</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">author</span><span class="p">,</span><span class="n">version</span><span class="p">,</span><span class="n">timee</span>
+    <span class="k">implicit none</span>
+<span class="k">    </span><span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span> <span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ncid</span><span class="p">,</span><span class="n">nrec</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">optional</span><span class="p">,</span> <span class="k">intent</span> <span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n3</span><span class="p">,</span> <span class="n">ns</span><span class="p">,</span> <span class="n">nfcts</span><span class="p">,</span> <span class="n">nlyrs</span>
+    <span class="kt">character</span> <span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">40</span><span class="p">),</span> <span class="k">intent</span> <span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">fname</span>
+
+    <span class="kt">character</span> <span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="kd">::</span> <span class="n">date</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">time</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">iret</span><span class="p">,</span><span class="n">varid</span><span class="p">,</span><span class="n">ncall</span><span class="p">,</span><span class="n">RecordDimID</span>
+    <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">xtimes</span><span class="p">(:)</span>
+    <span class="kt">logical</span> <span class="kd">::</span> <span class="n">exans</span>
+
+    <span class="k">inquire</span><span class="p">(</span><span class="k">file</span><span class="o">=</span><span class="nb">trim</span><span class="p">(</span><span class="n">fname</span><span class="p">),</span><span class="n">exist</span><span class="o">=</span><span class="n">exans</span><span class="p">)</span>
+    <span class="c">!write(*,*) &#39;opennc&#39;</span>
+    <span class="n">ncall</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="p">(.</span><span class="nb">not</span><span class="p">.</span><span class="n">exans</span><span class="p">)</span> <span class="k">then</span>
+
+<span class="k">      call </span><span class="nb">date_and_time</span><span class="p">(</span><span class="n">date</span><span class="p">,</span><span class="nb">time</span><span class="p">)</span>
+      <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_create</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span><span class="n">NF90_SHARE</span><span class="p">,</span><span class="n">ncid</span><span class="p">)</span>
+      <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="n">NF90_GLOBAL</span><span class="p">,</span><span class="s1">&#39;title&#39;</span><span class="p">,</span><span class="n">fname</span><span class="p">)</span>
+      <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="n">NF90_GLOBAL</span><span class="p">,</span><span class="s1">&#39;history&#39;</span><span class="p">,</span><span class="s1">&#39;Created on &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">date</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39; at &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="nb">time</span><span class="p">))</span>
+      <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">NF90_GLOBAL</span><span class="p">,</span> <span class="s1">&#39;Source&#39;</span><span class="p">,</span><span class="nb">trim</span><span class="p">(</span><span class="n">version</span><span class="p">))</span>
+      <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">NF90_GLOBAL</span><span class="p">,</span> <span class="s1">&#39;Author&#39;</span><span class="p">,</span><span class="nb">trim</span><span class="p">(</span><span class="n">author</span><span class="p">))</span>
+      <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_dim</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">NF90_UNLIMITED</span><span class="p">,</span> <span class="n">timeID</span><span class="p">)</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">n1</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">        </span><span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_dim</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span> <span class="s1">&#39;xt&#39;</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">xtID</span><span class="p">)</span>
+        <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_dim</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span> <span class="s1">&#39;xm&#39;</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">xmID</span><span class="p">)</span>
+        <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_var</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="s1">&#39;xt&#39;</span><span class="p">,</span><span class="n">NF90_FLOAT</span><span class="p">,(</span><span class="o">/</span><span class="n">xtID</span><span class="o">/</span><span class="p">)</span> <span class="p">,</span><span class="n">VarID</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;longname&#39;</span><span class="p">,</span><span class="s1">&#39;West-East displacement of cell centers&#39;</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;units&#39;</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+        <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_var</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="s1">&#39;xm&#39;</span><span class="p">,</span><span class="n">NF90_FLOAT</span><span class="p">,(</span><span class="o">/</span><span class="n">xmID</span><span class="o">/</span><span class="p">),</span><span class="n">VarID</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;longname&#39;</span><span class="p">,</span><span class="s1">&#39;West-East displacement of cell edges&#39;</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;units&#39;</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+      <span class="k">end if</span>
+<span class="k">      if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">n2</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">        </span><span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_dim</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span> <span class="s1">&#39;yt&#39;</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">ytID</span><span class="p">)</span>
+        <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_dim</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span> <span class="s1">&#39;ym&#39;</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">ymID</span><span class="p">)</span>
+        <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_var</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="s1">&#39;yt&#39;</span><span class="p">,</span><span class="n">NF90_FLOAT</span><span class="p">,</span><span class="n">ytID</span> <span class="p">,</span><span class="n">VarID</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;longname&#39;</span><span class="p">,</span><span class="s1">&#39;South-North displacement of cell centers&#39;</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;units&#39;</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+        <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_var</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="s1">&#39;ym&#39;</span><span class="p">,</span><span class="n">NF90_FLOAT</span><span class="p">,</span><span class="n">ymID</span><span class="p">,</span><span class="n">VarID</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;longname&#39;</span><span class="p">,</span><span class="s1">&#39;South-North displacement of cell edges&#39;</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;units&#39;</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+      <span class="k">end if</span>
+<span class="k">      if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">n3</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">        </span><span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_dim</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span> <span class="s1">&#39;zt&#39;</span><span class="p">,</span> <span class="n">n3</span><span class="p">,</span> <span class="n">ztID</span><span class="p">)</span>
+        <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_dim</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span> <span class="s1">&#39;zm&#39;</span><span class="p">,</span> <span class="n">n3</span><span class="p">,</span> <span class="n">zmID</span><span class="p">)</span>
+        <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_var</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="s1">&#39;zt&#39;</span><span class="p">,</span><span class="n">NF90_FLOAT</span><span class="p">,(</span><span class="o">/</span><span class="n">ztID</span><span class="o">/</span><span class="p">)</span> <span class="p">,</span><span class="n">VarID</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;longname&#39;</span><span class="p">,</span><span class="s1">&#39;Vertical displacement of cell centers&#39;</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;units&#39;</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+        <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_var</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="s1">&#39;zm&#39;</span><span class="p">,</span><span class="n">NF90_FLOAT</span><span class="p">,(</span><span class="o">/</span><span class="n">zmID</span><span class="o">/</span><span class="p">),</span><span class="n">VarID</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;longname&#39;</span><span class="p">,</span><span class="s1">&#39;Vertical displacement of cell edges&#39;</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;units&#39;</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+      <span class="k">end if</span>
+<span class="k">      if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">ns</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">        </span><span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_dim</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span> <span class="s1">&#39;zts&#39;</span><span class="p">,</span> <span class="n">ns</span><span class="p">,</span> <span class="n">ztsID</span><span class="p">)</span>
+        <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_var</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="s1">&#39;zts&#39;</span><span class="p">,</span><span class="n">NF90_FLOAT</span><span class="p">,(</span><span class="o">/</span><span class="n">ztsID</span><span class="o">/</span><span class="p">)</span> <span class="p">,</span><span class="n">VarID</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;longname&#39;</span><span class="p">,</span><span class="s1">&#39;Soil level depth of cell centers&#39;</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;units&#39;</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+      <span class="k">end if</span>
+<span class="k">      if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">nfcts</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">        </span><span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_dim</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span> <span class="s1">&#39;fct&#39;</span><span class="p">,</span> <span class="n">nfcts</span><span class="p">,</span> <span class="n">fctID</span><span class="p">)</span>
+        <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_var</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span> <span class="s1">&#39;fct&#39;</span><span class="p">,</span><span class="n">NF90_INT</span><span class="p">,(</span><span class="o">/</span><span class="n">fctID</span><span class="o">/</span><span class="p">)</span> <span class="p">,</span><span class="n">VarID</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;longname&#39;</span><span class="p">,</span><span class="s1">&#39;Facet number&#39;</span><span class="p">)</span>
+      <span class="k">end if</span>
+<span class="k">      if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">nlyrs</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">        </span><span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_dim</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span> <span class="s1">&#39;lyr&#39;</span><span class="p">,</span> <span class="n">nlyrs</span><span class="p">,</span> <span class="n">lyrID</span><span class="p">)</span>
+        <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_def_var</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span> <span class="s1">&#39;lyr&#39;</span><span class="p">,</span><span class="n">NF90_INT</span><span class="p">,(</span><span class="o">/</span><span class="n">lyrID</span><span class="o">/</span><span class="p">)</span> <span class="p">,</span><span class="n">VarID</span><span class="p">)</span>
+        <span class="n">iret</span><span class="o">=</span><span class="n">nf90_put_att</span><span class="p">(</span><span class="n">ncID</span><span class="p">,</span><span class="n">VarID</span><span class="p">,</span><span class="s1">&#39;longname&#39;</span><span class="p">,</span><span class="s1">&#39;Number of wall layers&#39;</span><span class="p">)</span>
+      <span class="k">end if</span>
+
+<span class="k">    else</span>
+<span class="k">       </span><span class="n">nrec</span> <span class="o">=</span> <span class="mi">0</span>
+       <span class="n">ncall</span><span class="o">=</span> <span class="mi">0</span>
+       <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_open</span> <span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">fname</span><span class="p">),</span> <span class="n">NF90_WRITE</span><span class="p">,</span> <span class="n">ncid</span><span class="p">)</span>
+       <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_inquire</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">unlimitedDimId</span> <span class="o">=</span> <span class="n">RecordDimID</span><span class="p">)</span>
+       <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_inquire_dimension</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">RecordDimID</span><span class="p">,</span> <span class="nb">len</span><span class="o">=</span><span class="n">nrec</span><span class="p">)</span>
+       <span class="k">if</span> <span class="p">(</span><span class="n">nrec</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<span class="k">        </span><span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_inq_varid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="n">timeID</span><span class="p">)</span>
+        <span class="k">allocate</span> <span class="p">(</span><span class="n">xtimes</span><span class="p">(</span><span class="n">nrec</span><span class="p">))</span>
+        <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_get_var</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span> <span class="n">timeId</span><span class="p">,</span> <span class="n">xtimes</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nrec</span><span class="p">))</span>
+
+        <span class="k">do while</span><span class="p">(</span><span class="n">xtimes</span><span class="p">(</span><span class="n">ncall</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">timee</span> <span class="o">-</span> <span class="nb">spacing</span><span class="p">(</span><span class="mf">1.</span><span class="p">))</span>
+            <span class="n">ncall</span><span class="o">=</span><span class="n">ncall</span><span class="o">+</span><span class="mi">1</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">ncall</span> <span class="o">&gt;=</span> <span class="n">nrec</span><span class="p">)</span> <span class="k">exit </span>
+<span class="k">        end do</span>
+<span class="k">        deallocate</span><span class="p">(</span><span class="n">xtimes</span><span class="p">)</span>
+       <span class="k">end if</span>
+<span class="k">       if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">n1</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">         </span><span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_inq_dimid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="s1">&#39;xt&#39;</span><span class="p">,</span><span class="n">xtId</span><span class="p">)</span>
+         <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_inq_dimid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="s1">&#39;xm&#39;</span><span class="p">,</span><span class="n">xmId</span><span class="p">)</span>
+       <span class="k">end if</span>
+<span class="k">       if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">n2</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">         </span><span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_inq_dimid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="s1">&#39;yt&#39;</span><span class="p">,</span><span class="n">ytId</span><span class="p">)</span>
+         <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_inq_dimid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="s1">&#39;ym&#39;</span><span class="p">,</span><span class="n">ymId</span><span class="p">)</span>
+       <span class="k">end if</span>
+<span class="k">       if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">n3</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">         </span><span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_inq_dimid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="s1">&#39;zt&#39;</span><span class="p">,</span><span class="n">ztId</span><span class="p">)</span>
+         <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_inq_dimid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="s1">&#39;zm&#39;</span><span class="p">,</span><span class="n">zmId</span><span class="p">)</span>
+       <span class="k">end if</span>
+<span class="k">       if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">ns</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">         </span><span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_inq_dimid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="s1">&#39;zts&#39;</span><span class="p">,</span><span class="n">ztsId</span><span class="p">)</span>
+       <span class="k">end if</span>
+<span class="k">       if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">nfcts</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">         </span><span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_inq_dimid</span><span class="p">(</span><span class="n">ncid</span><span class="p">,</span><span class="s1">&#39;fct&#39;</span><span class="p">,</span><span class="n">fctId</span><span class="p">)</span>
+       <span class="k">end if</span>
+<span class="k">    end if</span>
+<span class="k">    </span><span class="n">nrec</span> <span class="o">=</span> <span class="n">ncall</span>
+    <span class="n">iret</span> <span class="o">=</span> <span class="n">nf90_sync</span><span class="p">(</span><span class="n">ncid</span><span class="p">)</span>
+
+    <span class="n">iret</span><span class="o">=</span> <span class="n">nf90_enddef</span><span class="p">(</span><span class="n">ncID</span><span class="p">)</span>
+
+  <span class="k">end subroutine </span><span class="n">open_nc</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    
+    </div>
+  </div>
+
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2021 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> uDALES was developed by The uDALES Team</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

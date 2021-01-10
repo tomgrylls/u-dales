@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="Documentation for uDALES">
+   
+    <meta name="author" content="The uDALES Team" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>modsurfdata.f90 &ndash; uDALES</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">uDALES </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/dalesurban.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/dalesurban.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>modsurfdata.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.3% of total for source files.">39 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/modsurfdata.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">modsurfdata.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/modsurfdata.html">modsurfdata</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/modsurfdata.f90.html#src">modsurfdata.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+      
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Files dependent on this one</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~modsurfdata.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefilemodsurfdataf90AfferentGraph" width="641pt" height="235pt"
+ viewBox="0.00 0.00 641.00 234.73" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph" class="graph" transform="scale(.7099 .7099) rotate(0) translate(4 326.6665)">
+<title>sourcefile~~modsurfdata.f90~~AfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-326.6665 899,-326.6665 899,4 -4,4"/>
+<!-- sourcefile~modsurfdata.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node1" class="node">
+<title>sourcefile~modsurfdata.f90</title>
+<polygon fill="none" stroke="#000000" points="91,-252.2989 0,-252.2989 0,-228.2989 91,-228.2989 91,-252.2989"/>
+<text text-anchor="middle" x="45.5" y="-237.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">modsurfdata.f90</text>
+</g>
+<!-- sourcefile~modinlet.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node2" class="node">
+<title>sourcefile~modinlet.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node2"><a xlink:href=".././sourcefile/modinlet.f90.html" xlink:title="modinlet.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="336,-132.2989 265,-132.2989 265,-108.2989 336,-108.2989 336,-132.2989"/>
+<text text-anchor="middle" x="300.5" y="-117.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modinlet.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~modinlet.f90&#45;&gt;sourcefile~modsurfdata.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge1" class="edge">
+<title>sourcefile~modinlet.f90&#45;&gt;sourcefile~modsurfdata.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M275.5126,-108.2085C244.7579,-94.0367 194.3536,-73.3138 176,-80.2989"/>
+</g>
+<!-- sourcefile~modsave.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node9" class="node">
+<title>sourcefile~modsave.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node9"><a xlink:href=".././sourcefile/modsave.f90.html" xlink:title="modsave.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="213,-193.2989 139,-193.2989 139,-169.2989 213,-169.2989 213,-193.2989"/>
+<text text-anchor="middle" x="176" y="-178.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modsave.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~modinlet.f90&#45;&gt;sourcefile~modsave.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge28" class="edge">
+<title>sourcefile~modinlet.f90&#45;&gt;sourcefile~modsave.f90</title>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M275.9028,-132.3506C256.9751,-141.6244 230.6081,-154.5432 209.7144,-164.7803"/>
+<polygon fill="#002eff" stroke="#002eff" points="207.9862,-161.7294 200.5461,-169.2723 211.0661,-168.0154 207.9862,-161.7294"/>
+</g>
+<!-- sourcefile~modibm.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node3" class="node">
+<title>sourcefile~modibm.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node3"><a xlink:href=".././sourcefile/modibm.f90.html" xlink:title="modibm.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="760,-303.2989 691,-303.2989 691,-279.2989 760,-279.2989 760,-303.2989"/>
+<text text-anchor="middle" x="725.5" y="-288.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modibm.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~modibm.f90&#45;&gt;sourcefile~modsurfdata.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge2" class="edge">
+<title>sourcefile~modibm.f90&#45;&gt;sourcefile~modsurfdata.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M690.843,-296.8219C634.949,-305.236 521.3605,-320.2989 424.5,-320.2989 424.5,-320.2989 424.5,-320.2989 300.5,-320.2989 222.9279,-320.2989 199.1588,-329.769 127,-301.2989 103.0601,-291.8535 79.9855,-273.4168 64.5376,-259.2737"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="66.8652,-256.6578 57.1904,-252.3395 62.0606,-261.7486 66.8652,-256.6578"/>
+</g>
+<!-- sourcefile~modsubgrid.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node4" class="node">
+<title>sourcefile~modsubgrid.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node4"><a xlink:href=".././sourcefile/modsubgrid.f90.html" xlink:title="modsubgrid.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="617.5,-94.2989 530.5,-94.2989 530.5,-70.2989 617.5,-70.2989 617.5,-94.2989"/>
+<text text-anchor="middle" x="574" y="-79.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modsubgrid.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~modsubgrid.f90&#45;&gt;sourcefile~modsurfdata.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge3" class="edge">
+<title>sourcefile~modsubgrid.f90&#45;&gt;sourcefile~modsurfdata.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M530.3093,-78.467C500.3979,-76.6373 459.8962,-75.7205 424.5,-80.2989"/>
+</g>
+<!-- sourcefile~modboundary.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node8" class="node">
+<title>sourcefile~modboundary.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node8"><a xlink:href=".././sourcefile/modboundary.f90.html" xlink:title="modboundary.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="473,-173.2989 376,-173.2989 376,-149.2989 473,-149.2989 473,-173.2989"/>
+<text text-anchor="middle" x="424.5" y="-158.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modboundary.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~modsubgrid.f90&#45;&gt;sourcefile~modboundary.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge26" class="edge">
+<title>sourcefile~modsubgrid.f90&#45;&gt;sourcefile~modboundary.f90</title>
+<path fill="none" stroke="#00b9ff" stroke-dasharray="5,2" d="M539.2054,-94.3995C529.2211,-98.3533 518.4773,-103.0845 509,-108.2989 491.708,-117.813 489.651,-123.7029 473,-134.2989 467.7915,-137.6134 462.1526,-140.9599 456.6249,-144.1147"/>
+<polygon fill="#00b9ff" stroke="#00b9ff" points="454.5432,-141.2686 447.5228,-149.2037 457.9593,-147.3785 454.5432,-141.2686"/>
+</g>
+<!-- sourcefile~modfielddump.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node5" class="node">
+<title>sourcefile~modfielddump.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node5"><a xlink:href=".././sourcefile/modfielddump.f90.html" xlink:title="modfielddump.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="225,-292.2989 127,-292.2989 127,-268.2989 225,-268.2989 225,-292.2989"/>
+<text text-anchor="middle" x="176" y="-277.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modfielddump.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~modfielddump.f90&#45;&gt;sourcefile~modsurfdata.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge4" class="edge">
+<title>sourcefile~modfielddump.f90&#45;&gt;sourcefile~modsurfdata.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M136.8457,-268.2976C123.6755,-264.2608 108.8071,-259.7034 94.9502,-255.4561"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="95.6644,-252.0143 85.0777,-252.43 93.6129,-258.707 95.6644,-252.0143"/>
+</g>
+<!-- sourcefile~modthermodynamics.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node6" class="node">
+<title>sourcefile~modthermodynamics.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node6"><a xlink:href=".././sourcefile/modthermodynamics.f90.html" xlink:title="modthermodynamics.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="639,-254.2989 509,-254.2989 509,-230.2989 639,-230.2989 639,-254.2989"/>
+<text text-anchor="middle" x="574" y="-239.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modthermodynamics.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~modthermodynamics.f90&#45;&gt;sourcefile~modsurfdata.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge5" class="edge">
+<title>sourcefile~modthermodynamics.f90&#45;&gt;sourcefile~modsurfdata.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M508.7433,-234.9598C452.9514,-230.3132 370.7794,-227.3449 300.5,-240.2989"/>
+</g>
+<!-- sourcefile~modstatistics.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node7" class="node">
+<title>sourcefile~modstatistics.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node7"><a xlink:href=".././sourcefile/modstatistics.f90.html" xlink:title="modstatistics.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="470.5,-32.2989 378.5,-32.2989 378.5,-8.2989 470.5,-8.2989 470.5,-32.2989"/>
+<text text-anchor="middle" x="424.5" y="-17.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modstatistics.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~modstatistics.f90&#45;&gt;sourcefile~modsurfdata.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge6" class="edge">
+<title>sourcefile~modstatistics.f90&#45;&gt;sourcefile~modsurfdata.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M409.9492,-32.4317C387.8411,-49.6243 343.7715,-79.1366 300.5,-80.2989"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M300.5,-80.2989C245.1866,-81.7848 227.7146,-60.6171 176,-80.2989"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M176,-80.2989C112.6117,-104.4237 71.6356,-180.2912 54.5692,-218.236"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="51.1636,-217.2917 50.3909,-227.8583 57.5844,-220.0798 51.1636,-217.2917"/>
+</g>
+<!-- sourcefile~modboundary.f90&#45;&gt;sourcefile~modsurfdata.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge7" class="edge">
+<title>sourcefile~modboundary.f90&#45;&gt;sourcefile~modsurfdata.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M412.938,-173.4997C392.5652,-193.7783 347.9187,-232.9288 300.5,-240.2989"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M300.5,-240.2989C232.626,-250.8484 153.3564,-248.6102 101.4367,-245.2099"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="101.6466,-241.7162 91.429,-244.5178 101.1636,-248.6995 101.6466,-241.7162"/>
+</g>
+<!-- sourcefile~modboundary.f90&#45;&gt;sourcefile~modinlet.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge13" class="edge">
+<title>sourcefile~modboundary.f90&#45;&gt;sourcefile~modinlet.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M387.9666,-149.2193C374.8597,-144.8856 359.915,-139.9442 346.1326,-135.3871"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="346.9384,-131.9673 336.3451,-132.151 344.7408,-138.6134 346.9384,-131.9673"/>
+</g>
+<!-- sourcefile~moddriver.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node16" class="node">
+<title>sourcefile~moddriver.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node16"><a xlink:href=".././sourcefile/moddriver.f90.html" xlink:title="moddriver.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="340,-174.2989 261,-174.2989 261,-150.2989 340,-150.2989 340,-174.2989"/>
+<text text-anchor="middle" x="300.5" y="-159.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">moddriver.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~modboundary.f90&#45;&gt;sourcefile~moddriver.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge37" class="edge">
+<title>sourcefile~modboundary.f90&#45;&gt;sourcefile~moddriver.f90</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M375.8478,-161.6913C367.4545,-161.759 358.7186,-161.8294 350.2956,-161.8974"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="350.1921,-158.398 340.2207,-161.9786 350.2486,-165.3978 350.1921,-158.398"/>
+</g>
+<!-- sourcefile~modsave.f90&#45;&gt;sourcefile~modsurfdata.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge8" class="edge">
+<title>sourcefile~modsave.f90&#45;&gt;sourcefile~modsurfdata.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M149.2765,-193.3808C129.6595,-202.2498 102.8043,-214.3912 81.3279,-224.1009"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="79.8579,-220.9243 72.1878,-228.2332 82.7417,-227.3027 79.8579,-220.9243"/>
+</g>
+<!-- sourcefile~modstatsdump.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node10" class="node">
+<title>sourcefile~modstatsdump.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node10"><a xlink:href=".././sourcefile/modstatsdump.f90.html" xlink:title="modstatsdump.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="776,-54.2989 675,-54.2989 675,-30.2989 776,-30.2989 776,-54.2989"/>
+<text text-anchor="middle" x="725.5" y="-39.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modstatsdump.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~modstatsdump.f90&#45;&gt;sourcefile~modsurfdata.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge9" class="edge">
+<title>sourcefile~modstatsdump.f90&#45;&gt;sourcefile~modsurfdata.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M574,-.2989C543.9125,-1.0862 536.038,-6.0768 509,-19.2989 467.3901,-39.6471 470.4361,-74.3572 424.5,-80.2989"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M424.5,-80.2989C369.8442,-87.3686 355.5912,-78.8191 300.5,-80.2989"/>
+</g>
+<!-- sourcefile~modstatsdump.f90&#45;&gt;sourcefile~modsubgrid.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge18" class="edge">
+<title>sourcefile~modstatsdump.f90&#45;&gt;sourcefile~modsubgrid.f90</title>
+<path fill="none" stroke="#e7ff00" stroke-dasharray="5,2" d="M680.045,-54.3003C663.506,-58.667 644.66,-63.6428 627.489,-68.1764"/>
+<polygon fill="#e7ff00" stroke="#e7ff00" points="626.3777,-64.8498 617.6025,-70.7867 628.1647,-71.6179 626.3777,-64.8498"/>
+</g>
+<!-- sourcefile~modstatsdump.f90&#45;&gt;sourcefile~modstatistics.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge22" class="edge">
+<title>sourcefile~modstatsdump.f90&#45;&gt;sourcefile~modstatistics.f90</title>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M700.0865,-30.2824C670.4565,-17.4526 619.702,.8968 574,-.2989"/>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M574,-.2989C542.9924,-1.1102 508.672,-5.4527 480.7432,-9.8849"/>
+<polygon fill="#00ffb9" stroke="#00ffb9" points="480.0657,-6.4491 470.7608,-11.5155 481.1943,-13.3575 480.0657,-6.4491"/>
+</g>
+<!-- sourcefile~modforces.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node11" class="node">
+<title>sourcefile~modforces.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node11"><a xlink:href=".././sourcefile/modforces.f90.html" xlink:title="modforces.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614.5,-52.2989 533.5,-52.2989 533.5,-28.2989 614.5,-28.2989 614.5,-52.2989"/>
+<text text-anchor="middle" x="574" y="-37.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modforces.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~modforces.f90&#45;&gt;sourcefile~modsurfdata.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge10" class="edge">
+<title>sourcefile~modforces.f90&#45;&gt;sourcefile~modsurfdata.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M533.9533,-52.3018C497.2353,-63.0697 445.4836,-77.5847 424.5,-80.2989"/>
+</g>
+<!-- sourcefile~modstartup.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node12" class="node">
+<title>sourcefile~modstartup.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node12"><a xlink:href=".././sourcefile/modstartup.f90.html" xlink:title="modstartup.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="768,-134.2989 683,-134.2989 683,-110.2989 768,-110.2989 768,-134.2989"/>
+<text text-anchor="middle" x="725.5" y="-119.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modstartup.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~modstartup.f90&#45;&gt;sourcefile~modsurfdata.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge11" class="edge">
+<title>sourcefile~modstartup.f90&#45;&gt;sourcefile~modsurfdata.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M682.6838,-120.8965C652.318,-120.2445 610.6219,-120.0416 574,-122.2989"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M574,-122.2989C507.6755,-126.387 490.9499,-120.5648 424.5,-120.2989"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M424.5,-120.2989C366.5929,-120.0673 358.3867,-78.744 300.5,-80.2989"/>
+</g>
+<!-- sourcefile~modstartup.f90&#45;&gt;sourcefile~modinlet.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge12" class="edge">
+<title>sourcefile~modstartup.f90&#45;&gt;sourcefile~modinlet.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M424.5,-120.2989C398.5277,-120.195 369.4952,-120.1891 346.0553,-120.2118"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="346.0405,-116.7117 336.0447,-120.2236 346.0488,-123.7117 346.0405,-116.7117"/>
+</g>
+<!-- sourcefile~modstartup.f90&#45;&gt;sourcefile~modsubgrid.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge17" class="edge">
+<title>sourcefile~modstartup.f90&#45;&gt;sourcefile~modsubgrid.f90</title>
+<path fill="none" stroke="#e7ff00" stroke-dasharray="5,2" d="M682.8956,-111.0503C665.6899,-106.5075 645.6422,-101.2144 627.4717,-96.4169"/>
+<polygon fill="#e7ff00" stroke="#e7ff00" points="628.1623,-92.9794 617.6002,-93.8105 626.3753,-99.7474 628.1623,-92.9794"/>
+</g>
+<!-- sourcefile~modstartup.f90&#45;&gt;sourcefile~modthermodynamics.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge20" class="edge">
+<title>sourcefile~modstartup.f90&#45;&gt;sourcefile~modthermodynamics.f90</title>
+<path fill="none" stroke="#00ff2e" stroke-dasharray="5,2" d="M717.0241,-134.6048C702.9082,-154.2893 672.776,-193.0068 639,-216.2989 633.6814,-219.9667 627.7691,-223.2322 621.7389,-226.1045"/>
+<polygon fill="#00ff2e" stroke="#00ff2e" points="619.9719,-223.0584 612.2342,-230.2957 622.7963,-229.4634 619.9719,-223.0584"/>
+</g>
+<!-- sourcefile~modstartup.f90&#45;&gt;sourcefile~modboundary.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge24" class="edge">
+<title>sourcefile~modstartup.f90&#45;&gt;sourcefile~modboundary.f90</title>
+<path fill="none" stroke="#00b9ff" stroke-dasharray="5,2" d="M574,-122.2989C536.4764,-124.6118 495.2289,-136.082 465.5824,-145.9893"/>
+<polygon fill="#00b9ff" stroke="#00b9ff" points="464.3211,-142.7216 455.9952,-149.2738 466.5898,-149.3438 464.3211,-142.7216"/>
+</g>
+<!-- sourcefile~modstartup.f90&#45;&gt;sourcefile~modforces.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge31" class="edge">
+<title>sourcefile~modstartup.f90&#45;&gt;sourcefile~modforces.f90</title>
+<path fill="none" stroke="#e700ff" stroke-dasharray="5,2" d="M698.4255,-110.2155C690.5865,-106.2317 682.2057,-101.4801 675,-96.2989 656.882,-83.2715 658.1182,-72.8085 639,-61.2989 634.3645,-58.5083 629.3167,-56.0453 624.1508,-53.8819"/>
+<polygon fill="#e700ff" stroke="#e700ff" points="625.3787,-50.6043 614.7881,-50.3051 622.8806,-57.1434 625.3787,-50.6043"/>
+</g>
+<!-- sourcefile~modpois.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node13" class="node">
+<title>sourcefile~modpois.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node13"><a xlink:href=".././sourcefile/modpois.f90.html" xlink:title="modpois.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="609.5,-174.2989 538.5,-174.2989 538.5,-150.2989 609.5,-150.2989 609.5,-174.2989"/>
+<text text-anchor="middle" x="574" y="-159.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modpois.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~modstartup.f90&#45;&gt;sourcefile~modpois.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge34" class="edge">
+<title>sourcefile~modstartup.f90&#45;&gt;sourcefile~modpois.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M682.8956,-133.5476C663.1299,-138.7663 639.6137,-144.9752 619.5015,-150.2853"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="618.4089,-146.9538 609.6337,-152.8907 620.1959,-153.7219 618.4089,-146.9538"/>
+</g>
+<!-- sourcefile~modstartup.f90&#45;&gt;sourcefile~moddriver.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge36" class="edge">
+<title>sourcefile~modstartup.f90&#45;&gt;sourcefile~moddriver.f90</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M424.5,-120.2989C391.3921,-120.1665 355.8146,-133.7827 331.297,-145.5446"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="329.5448,-142.507 322.1496,-150.0939 332.662,-148.7746 329.5448,-142.507"/>
+</g>
+<!-- sourcefile~modpois.f90&#45;&gt;sourcefile~modboundary.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge23" class="edge">
+<title>sourcefile~modpois.f90&#45;&gt;sourcefile~modboundary.f90</title>
+<path fill="none" stroke="#00b9ff" stroke-dasharray="5,2" d="M538.191,-162.0594C521.7188,-161.9492 501.7463,-161.8156 483.1657,-161.6914"/>
+<polygon fill="#00b9ff" stroke="#00b9ff" points="483.0406,-158.1905 473.0174,-161.6235 482.9937,-165.1904 483.0406,-158.1905"/>
+</g>
+<!-- sourcefile~advec_2nd.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node14" class="node">
+<title>sourcefile~advec_2nd.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node14"><a xlink:href=".././sourcefile/advec_2nd.f90.html" xlink:title="advec_2nd.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="895,-303.2989 812,-303.2989 812,-279.2989 895,-279.2989 895,-303.2989"/>
+<text text-anchor="middle" x="853.5" y="-288.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">advec_2nd.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~advec_2nd.f90&#45;&gt;sourcefile~modibm.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge15" class="edge">
+<title>sourcefile~advec_2nd.f90&#45;&gt;sourcefile~modibm.f90</title>
+<path fill="none" stroke="#ff8b00" stroke-dasharray="5,2" d="M811.9421,-291.2989C798.5628,-291.2989 783.6854,-291.2989 770.0968,-291.2989"/>
+<polygon fill="#ff8b00" stroke="#ff8b00" points="770.003,-287.799 760.0029,-291.2989 770.0029,-294.799 770.003,-287.799"/>
+</g>
+<!-- sourcefile~program.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_node15" class="node">
+<title>sourcefile~program.f90</title>
+<g id="a_sourcefile~~modsurfdata.f90~~AfferentGraph_node15"><a xlink:href=".././sourcefile/program.f90.html" xlink:title="program.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="889,-134.2989 818,-134.2989 818,-110.2989 889,-110.2989 889,-134.2989"/>
+<text text-anchor="middle" x="853.5" y="-119.8989" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">program.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~program.f90&#45;&gt;sourcefile~modibm.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge14" class="edge">
+<title>sourcefile~program.f90&#45;&gt;sourcefile~modibm.f90</title>
+<path fill="none" stroke="#ff8b00" stroke-dasharray="5,2" d="M846.1244,-134.3516C832.9429,-155.6032 804.0851,-200.843 776,-236.2989 766.2506,-248.607 754.4217,-261.5807 744.6637,-271.8348"/>
+<polygon fill="#ff8b00" stroke="#ff8b00" points="742.0916,-269.46 737.6741,-279.09 747.1328,-274.3166 742.0916,-269.46"/>
+</g>
+<!-- sourcefile~program.f90&#45;&gt;sourcefile~modsubgrid.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge16" class="edge">
+<title>sourcefile~program.f90&#45;&gt;sourcefile~modsubgrid.f90</title>
+<path fill="none" stroke="#e7ff00" stroke-dasharray="5,2" d="M725.5,-82.2989C693.5865,-75.1521 656.934,-74.9477 627.6747,-76.6279"/>
+<polygon fill="#e7ff00" stroke="#e7ff00" points="627.3999,-73.1383 617.6535,-77.2924 627.8632,-80.1229 627.3999,-73.1383"/>
+</g>
+<!-- sourcefile~program.f90&#45;&gt;sourcefile~modfielddump.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge19" class="edge">
+<title>sourcefile~program.f90&#45;&gt;sourcefile~modfielddump.f90</title>
+<path fill="none" stroke="#5cff00" stroke-dasharray="5,2" d="M725.5,-222.2989C685.2733,-236.1496 680.3284,-253.2 639,-263.2989 497.5091,-297.8734 324.5279,-292.0414 235.3986,-285.6667"/>
+<polygon fill="#5cff00" stroke="#5cff00" points="235.4452,-282.1606 225.2132,-284.9095 234.9261,-289.1414 235.4452,-282.1606"/>
+</g>
+<!-- sourcefile~program.f90&#45;&gt;sourcefile~modthermodynamics.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge21" class="edge">
+<title>sourcefile~program.f90&#45;&gt;sourcefile~modthermodynamics.f90</title>
+<path fill="none" stroke="#00ff2e" stroke-dasharray="5,2" d="M725.5,-222.2989C701.3582,-230.6113 673.9566,-235.5004 649.1581,-238.3653"/>
+<polygon fill="#00ff2e" stroke="#00ff2e" points="648.6455,-234.9 639.0717,-239.4379 649.3857,-241.8608 648.6455,-234.9"/>
+</g>
+<!-- sourcefile~program.f90&#45;&gt;sourcefile~modboundary.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge25" class="edge">
+<title>sourcefile~program.f90&#45;&gt;sourcefile~modboundary.f90</title>
+<path fill="none" stroke="#00b9ff" stroke-dasharray="5,2" d="M725.5,-222.2989C661.2825,-244.41 641.3108,-211.3568 574,-202.2989"/>
+<path fill="none" stroke="#00b9ff" stroke-dasharray="5,2" d="M574,-202.2989C537.4551,-197.3812 497.2051,-185.9833 467.6838,-176.4503"/>
+<polygon fill="#00b9ff" stroke="#00b9ff" points="468.6974,-173.0993 458.1044,-173.301 466.5111,-179.7492 468.6974,-173.0993"/>
+</g>
+<!-- sourcefile~program.f90&#45;&gt;sourcefile~modsave.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge29" class="edge">
+<title>sourcefile~program.f90&#45;&gt;sourcefile~modsave.f90</title>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M574,-202.2989C507.5418,-193.3558 313.566,-185.9167 223.2649,-182.8308"/>
+<polygon fill="#002eff" stroke="#002eff" points="223.1533,-179.3251 213.0407,-182.4849 222.9166,-186.3211 223.1533,-179.3251"/>
+</g>
+<!-- sourcefile~program.f90&#45;&gt;sourcefile~modstatsdump.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge30" class="edge">
+<title>sourcefile~program.f90&#45;&gt;sourcefile~modstatsdump.f90</title>
+<path fill="none" stroke="#5c00ff" stroke-dasharray="5,2" d="M837.5892,-110.2765C822.2079,-98.8814 798.0562,-81.5803 776,-68.2989 770.8046,-65.1705 765.191,-62.0446 759.6599,-59.1007"/>
+<polygon fill="#5c00ff" stroke="#5c00ff" points="761.005,-55.8553 750.5177,-54.3496 757.777,-62.0667 761.005,-55.8553"/>
+</g>
+<!-- sourcefile~program.f90&#45;&gt;sourcefile~modforces.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge32" class="edge">
+<title>sourcefile~program.f90&#45;&gt;sourcefile~modforces.f90</title>
+<path fill="none" stroke="#e700ff" stroke-dasharray="5,2" d="M820.2235,-110.2365C794.6263,-101.3659 758.2158,-89.6255 725.5,-82.2989"/>
+<path fill="none" stroke="#e700ff" stroke-dasharray="5,2" d="M725.5,-82.2989C690.9221,-74.5554 652.4526,-63.8643 622.9313,-55.2067"/>
+<polygon fill="#e700ff" stroke="#e700ff" points="623.8632,-51.8326 613.2813,-52.3558 621.8798,-58.5457 623.8632,-51.8326"/>
+</g>
+<!-- sourcefile~program.f90&#45;&gt;sourcefile~modstartup.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge33" class="edge">
+<title>sourcefile~program.f90&#45;&gt;sourcefile~modstartup.f90</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M817.8449,-122.2989C805.5838,-122.2989 791.5835,-122.2989 778.2549,-122.2989"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="778.2334,-118.799 768.2334,-122.2989 778.2333,-125.799 778.2334,-118.799"/>
+</g>
+<!-- sourcefile~program.f90&#45;&gt;sourcefile~modpois.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge35" class="edge">
+<title>sourcefile~program.f90&#45;&gt;sourcefile~modpois.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M843.0989,-134.6189C823.0971,-157.2355 776.6942,-204.672 725.5,-222.2989"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M725.5,-222.2989C724.7894,-222.5436 658.1952,-195.9969 613.5451,-178.1384"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="614.6902,-174.8268 604.1055,-174.3616 612.0898,-181.3259 614.6902,-174.8268"/>
+</g>
+<!-- sourcefile~moddriver.f90&#45;&gt;sourcefile~modsave.f90 -->
+<g id="sourcefile~~modsurfdata.f90~~AfferentGraph_edge27" class="edge">
+<title>sourcefile~moddriver.f90&#45;&gt;sourcefile~modsave.f90</title>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M260.7651,-168.3629C248.8674,-170.1786 235.7016,-172.1879 223.3644,-174.0706"/>
+<polygon fill="#002eff" stroke="#002eff" points="222.5996,-170.6467 213.2421,-175.6154 223.6557,-177.5666 222.5996,-170.6467"/>
+</g>
+</g>
+</svg>
+</div><script>var pansourcefilemodsurfdataf90AfferentGraph = svgPanZoom('#sourcefilemodsurfdataf90AfferentGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="190pt" height="32pt"
+ viewBox="0.00 0.00 190.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 186,-28 186,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="67,-24 0,-24 0,0 67,0 67,-24"/>
+<text text-anchor="middle" x="33.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="182,-24 85,-24 85,0 182,0 182,-24"/>
+<text text-anchor="middle" x="133.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a file to a file which it depends on. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+      
+      <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/modsurfdata.html">modsurfdata</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/modsurfdata.f90.html#src">modsurfdata.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">!&gt; \file modsurfdata.f90</span>
+<a name="ln-2"></a><span class="c">!! Variable definitions and auxilary routines for the surface model</span>
+<a name="ln-3"></a>
+<a name="ln-4"></a><span class="c">!&gt;</span>
+<a name="ln-5"></a><span class="c">!! Variable definitions and auxilary routines for surface model</span>
+<a name="ln-6"></a><span class="c">!&gt;</span>
+<a name="ln-7"></a><span class="c">!! This routine should have no dependency on any other routine, save perhaps modglobal or modfields.</span>
+<a name="ln-8"></a><span class="c">!!  \author Thijs Heus, MPI-M</span>
+<a name="ln-9"></a><span class="c">!!  \todo Documentation</span>
+<a name="ln-10"></a><span class="c">!!  \par Revision list</span>
+<a name="ln-11"></a><span class="c">!  This file is part of DALES.</span>
+<a name="ln-12"></a><span class="c">!</span>
+<a name="ln-13"></a><span class="c">! DALES is free software; you can redistribute it and/or modify</span>
+<a name="ln-14"></a><span class="c">! it under the terms of the GNU General Public License as published by</span>
+<a name="ln-15"></a><span class="c">! the Free Software Foundation; either version 3 of the License, or</span>
+<a name="ln-16"></a><span class="c">! (at your option) any later version.</span>
+<a name="ln-17"></a><span class="c">!</span>
+<a name="ln-18"></a><span class="c">! DALES is distributed in the hope that it will be useful,</span>
+<a name="ln-19"></a><span class="c">! but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="ln-20"></a><span class="c">! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="ln-21"></a><span class="c">! GNU General Public License for more details.</span>
+<a name="ln-22"></a><span class="c">!</span>
+<a name="ln-23"></a><span class="c">! You should have received a copy of the GNU General Public License</span>
+<a name="ln-24"></a><span class="c">! along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<a name="ln-25"></a><span class="c">!</span>
+<a name="ln-26"></a><span class="c">!  Copyright 1993-2009 Delft University of Technology, Wageningen University, Utrecht University, KNMI</span>
+<a name="ln-27"></a><span class="c">!</span>
+<a name="ln-28"></a>
+<a name="ln-29"></a>
+<a name="ln-30"></a><span class="c">!!whole module should be removed and variables moved</span>
+<a name="ln-31"></a>
+<a name="ln-32"></a>
+<a name="ln-33"></a><span class="k">module </span><span class="n">modsurfdata</span>
+<a name="ln-34"></a>
+<a name="ln-35"></a><span class="c">! implicit none</span>
+<a name="ln-36"></a>
+<a name="ln-37"></a><span class="k">SAVE</span>
+<a name="ln-38"></a>  <span class="c">! Surface properties</span>
+<a name="ln-39"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">tskin</span>      <span class="p">(:,:)</span> <span class="c">!&lt;  Skin temperature [K]</span>
+<a name="ln-40"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">qskin</span>      <span class="p">(:,:)</span> <span class="c">!&lt;  Skin specific humidity [kg/kg]</span>
+<a name="ln-41"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">ps</span>       <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>    <span class="c">!&lt;  Surface pressure [Pa]</span>
+<a name="ln-42"></a>
+<a name="ln-43"></a>  <span class="c">! Surface energy balance</span>
+<a name="ln-44"></a>  <span class="kt">logical</span>           <span class="kd">::</span> <span class="n">lmostlocal</span>  <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>  <span class="c">!&lt;  Switch to apply MOST locally to get local Obukhov length</span>
+<a name="ln-45"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">obl</span>   <span class="p">(:,:)</span>      <span class="c">!&lt;  Obukhov length [m]</span>
+<a name="ln-46"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">oblav</span> <span class="o">=</span>   <span class="mf">0.001</span>           <span class="c">!&lt;  Spatially averaged obukhov length [m]</span>
+<a name="ln-47"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">Cm</span>    <span class="p">(:,:)</span>      <span class="c">!&lt;  Drag coefficient for momentum [-]</span>
+<a name="ln-48"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">Cs</span>    <span class="p">(:,:)</span>      <span class="c">!&lt;  Drag coefficient for scalars [-]</span>
+<a name="ln-49"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">ustar</span> <span class="p">(:,:)</span>      <span class="c">!&lt;  Friction velocity [m/s]</span>
+<a name="ln-50"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">thlflux</span> <span class="p">(:,:)</span>    <span class="c">!&lt;  Kinematic temperature flux [K m/s]</span>
+<a name="ln-51"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">qtflux</span>  <span class="p">(:,:)</span>    <span class="c">!&lt;  Kinematic specific humidity flux [kg/kg m/s]</span>
+<a name="ln-52"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">svflux</span>  <span class="p">(:,:,:)</span>  <span class="c">!&lt;  Kinematic scalar flux [- m/s]</span>
+<a name="ln-53"></a>
+<a name="ln-54"></a>  <span class="c">! Surface gradients of prognostic variables</span>
+<a name="ln-55"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">dudz</span>  <span class="p">(:,:)</span>      <span class="c">!&lt;  U-wind gradient in surface layer [1/s]</span>
+<a name="ln-56"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">dvdz</span>  <span class="p">(:,:)</span>      <span class="c">!&lt;  V-wind gradient in surface layer [1/s]</span>
+<a name="ln-57"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">dqtdz</span> <span class="p">(:,:)</span>      <span class="c">!&lt;  Specific humidity gradient in surface layer [kg/kg/m]</span>
+<a name="ln-58"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">dthldz</span><span class="p">(:,:)</span>      <span class="c">!&lt;  Liquid water potential temperature gradient in surface layer [K/m]</span>
+<a name="ln-59"></a>
+<a name="ln-60"></a>  <span class="c">! Surface properties in case of prescribed conditions (previous isurf 2, 3 and 4)</span>
+<a name="ln-61"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">thls</span>     <span class="o">=</span> <span class="o">-</span><span class="mf">1.</span>    <span class="c">!&lt;  Surface liquid water potential temperature [K]</span>
+<a name="ln-62"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">thl_top</span>  <span class="o">=</span> <span class="o">-</span><span class="mf">1.</span>    <span class="c">!&lt;  Surface liquid water potential temperature [K] at top wall</span>
+<a name="ln-63"></a>
+<a name="ln-64"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">qts</span>     <span class="o">=</span> <span class="o">-</span><span class="mf">1.</span>         <span class="c">!&lt;  Surface specific humidity [kg/kg]</span>
+<a name="ln-65"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">qt_top</span>  <span class="o">=</span> <span class="o">-</span><span class="mf">1.</span>     <span class="c">!&lt;  Top value of specific humidity [kg/kg]</span>
+<a name="ln-66"></a>
+<a name="ln-67"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">thvs</span>    <span class="o">=</span> <span class="o">-</span><span class="mf">1.</span>         <span class="c">!&lt;  Surface virtual temperature [K]</span>
+<a name="ln-68"></a>
+<a name="ln-69"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">svs</span>   <span class="p">(:)</span>        <span class="c">!&lt;  Surface scalar concentration [-]</span>
+<a name="ln-70"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">sv_top</span> <span class="p">(:)</span>       <span class="c">! top scalar concentration concentrations</span>
+<a name="ln-71"></a>
+<a name="ln-72"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">z0</span>    <span class="o">=</span> <span class="o">-</span><span class="mf">1.</span>       <span class="c">!&lt;  Surface roughness length [m]</span>
+<a name="ln-73"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">z0h</span>   <span class="o">=</span> <span class="o">-</span><span class="mf">1.</span>      <span class="c">!&lt;  Surface roughness for heat [m]</span>
+<a name="ln-74"></a>  <span class="c">! prescribed surface fluxes</span>
+<a name="ln-75"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">Cmav</span>             <span class="c">!&lt;  Average drag coefficient for momentum [-]</span>
+<a name="ln-76"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">Csav</span>             <span class="c">!&lt;  Average drag coefficient for scalars [-]</span>
+<a name="ln-77"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">horvel</span>           <span class="c">!&lt;  Average horizontal velocity at first level</span>
+<a name="ln-78"></a>
+<a name="ln-79"></a>
+<a name="ln-80"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">wtsurf</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.</span>      <span class="c">!&lt;  Prescribed kinematic temperature flux [K m/s]</span>
+<a name="ln-81"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">wttop</span>  <span class="o">=</span> <span class="mf">0.</span>
+<a name="ln-82"></a>
+<a name="ln-83"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">wqtop</span>  <span class="o">=</span> <span class="mf">0.</span>
+<a name="ln-84"></a>  <span class="kt">real</span>              <span class="kd">::</span> <span class="n">wqsurf</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.</span>      <span class="c">!&lt;  Prescribed kinematic moisture flux [kg/kg m/s]</span>
+<a name="ln-85"></a>
+<a name="ln-86"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">wsvsurf</span><span class="p">(:)</span> <span class="c">!&lt;  Prescribed surface scalar(n) flux [- m/s]</span>
+<a name="ln-87"></a>  <span class="kt">real</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">wsvtop</span><span class="p">(:)</span>
+<a name="ln-88"></a>  <span class="kt">real</span> <span class="kd">::</span> <span class="n">wsvsurfdum</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">99</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.</span> <span class="c">!&lt;  Dummy variables as nsv allocated variable</span>
+<a name="ln-89"></a>  <span class="kt">real</span> <span class="kd">::</span> <span class="n">wsvtopdum</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">99</span><span class="p">)</span>  <span class="o">=</span> <span class="mf">0.</span>
+<a name="ln-90"></a>
+<a name="ln-91"></a>
+<a name="ln-92"></a><span class="k">end module </span><span class="n">modsurfdata</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2021 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> uDALES was developed by The uDALES Team</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>
