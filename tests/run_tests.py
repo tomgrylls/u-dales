@@ -121,14 +121,12 @@ def run_and_compare(cases_dir, path_to_exes, is_patch=False):
                                     model_output_dirs[0].parent)
 
 def run_udales(path_to_exe: Path, namelist: str, model_output_dir: str, 
-               model_output_dirs: list, cpu_count=None) -> None:
-    if cpu_count is None:
-        cpu_count = str(os.cpu_count())
+               model_output_dirs: list, cpu_count=2) -> None:
     print(f'Running uDALES in: {path_to_exe}')
     try:
         subprocess.run(['mpiexec', '-np', cpu_count, path_to_exe / 'u-dales',
                         namelist], cwd=model_output_dir, check=True, 
-                        stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+                        stdout=subprocess.DEVNULL)
     except:
         print(f'Could not run case uDALES in {path_to_exe} for namelist {namelist}')
         sys.exit(1)
