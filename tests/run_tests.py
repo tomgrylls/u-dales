@@ -125,8 +125,7 @@ def run_udales(path_to_exe: Path, namelist: str, model_output_dir: str,
     print(f'Running uDALES in: {path_to_exe}')
     try:
         subprocess.run(['mpiexec', '-np', str(cpu_count), path_to_exe / 'u-dales',
-                        namelist], cwd=model_output_dir, check=True, 
-                        stdout=subprocess.DEVNULL)
+                        namelist], cwd=model_output_dir, check=True)
     except subprocess.CalledProcessError:
         print(f'Could not run case uDALES in {path_to_exe} for namelist {namelist}')
         sys.exit(1)
